@@ -5,7 +5,7 @@ C is one of the most powerful and foundational programming languages. By learnin
 
 ---
 
-## 📖 Why Learn C?
+## 📖 Why Am I Learning C?
 - **Foundation of Programming**: Many modern languages (C++, Java, Python) are influenced by C.
 - **Performance**: C gives you direct control over memory and hardware.
 - **Portability**: C programs can run on almost any system.
