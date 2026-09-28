@@ -8,9 +8,9 @@
  }
 int main()
 {
-    int nbr;
+    int nr;
     printf("Enter a number you want to multiply by 10 :");
-    scanf("%d", &nbr);
-    printf("The number %d multiply by 10 is %d", nbr,num(nbr));
+    scanf("%d", &nr);
+    printf("The number %d multiply by 10 is %d", nr,num(nr));
     return 0;
 }
