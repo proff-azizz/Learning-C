@@ -5,3 +5,4 @@ int main() {
     scanf("%d", &rep);
     printf("The number you entered is: %d\n", rep);
     return 0;
+}
