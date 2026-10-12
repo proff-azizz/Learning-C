@@ -6,9 +6,19 @@ int main()
     while (1)
     {
         printf("Enter 1st number\n");
-        scanf("%d", &num1);
+       
+        if (scanf("%d", &num1) != 1)
+        {
+            printf("Invalid input. Please enter a valid integer.\n");
+            return 1; // Exit the program with an error code
+        }
         printf("Enter 2nd number:\n");
-        scanf(" %d", &num2);
+        
+        if (scanf("%d", &num2) != 1)
+        {
+            printf("Invalid input. Please enter a valid integer.\n");
+            return 1; // Exit the program with an error code
+        }
         printf("Select the operation you want to perform\n");
         printf("Enter 0 to exit the calculator\n");
         printf("1. Add +\n");
