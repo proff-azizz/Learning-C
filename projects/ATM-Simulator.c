@@ -22,7 +22,7 @@ int main(void)
         printf("4. Exit\n");
         if (scanf("%d", &select) != 1)
            { printf("Invalid input, Enter a number \n");
-            while (getchar()!= '\n');
+            while (getchar()!= '\n')
             {
 
             }
