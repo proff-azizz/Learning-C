@@ -8,22 +8,26 @@
 // Skills: Functions, conditions, loops and numeric calculations.
 // Challenge: Reject negative amounts and withdrawals exceeding the balance.
 #include <stdio.h>
-int main()
+int main(void)
 {
 
     int depo, wd, balance = 0, select;
     while (1)
     {
         printf("WELCOME TO MY MINI ATM SIMULATOR !!!\n");
-        printf(" So What do you Want To Do Today ?\n ");
+        printf("So What do you Want To Do Today ?\n ");
         printf("1. Show Balance\n");
         printf("2. Deposit Money\n");
         printf("3. Withdraw Money\n");
         printf("4. Exit\n");
         if (scanf("%d", &select) != 1)
-            printf("Enter a Value not Constants / Words");
-            
-        else
+           { printf("Invalid input, Enter a number \n");
+            while (getchar()!= '\n');
+            {
+
+            }
+            continue;
+           }
             switch (select)
             {
             case (1):
@@ -68,7 +72,7 @@ int main()
             }
             default:
                 printf("You entered invalid option \n");
-                return 1;
+                break;
             }
     }
 }
