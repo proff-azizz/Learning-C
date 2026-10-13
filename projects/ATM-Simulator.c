@@ -21,7 +21,8 @@ int main()
         printf("3. Withdraw Money\n");
         printf("4. Exit\n");
         if (scanf("%d", &select) != 1)
-            ("Enter a Value not Constants / Words");
+            printf("Enter a Value not Constants / Words");
+            
         else
             switch (select)
             {
@@ -34,12 +35,13 @@ int main()
             {
                 printf("Enter The amount you want to deposit : ");
                 scanf("%d", &depo);
-                if (depo < 0)
-                    printf("Enter a positive value\n");
-                else
-                    printf("%d Rs have been deposited in your account\n", depo);
-                balance = balance + depo;
+                if (depo <= 0)
+                    printf("Enter a positive value / not zero\n");
 
+                else{
+                    balance = balance + depo;
+                printf("%d Rs have been deposited in your account\n", depo);
+                }
                 break;
             }
             case (3):
@@ -49,20 +51,24 @@ int main()
                 if (wd > balance)
                     printf("The amount must'nt exceed your balance !\n");
 
-                else if (wd < 0)
-                    printf("Enter a positive value\n");
+                else if (wd <= 0)
+                    printf("Enter a positive value / not zero\n");
 
-                else
-
-                    printf("%d Rs has been withdrawn from your account\n", wd);
-                balance = balance - wd;
+                else{
+                    balance = balance - wd;
+                printf("%d Rs has been withdrawn from your account\n", wd);
+                }
                 break;
+                
             }
             case (4):
             {
                 printf("Exiting the program... \n Done...\n");
                 return 0;
             }
+            default:
+                printf("You entered invalid option \n");
+                return 1;
             }
     }
 }
