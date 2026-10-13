@@ -38,8 +38,15 @@ int main(void)
             case (2):
             {
                 printf("Enter The amount you want to deposit : ");
-                scanf("%d", &depo);
-                if (depo <= 0)
+                if (scanf("%d", &depo) != 1)
+           { printf("Invalid input, Enter a number \n");
+            while (getchar()!= '\n')
+            {
+
+            }
+            continue;
+           }
+                else if (depo <= 0)
                     printf("Enter a positive value / not zero\n");
 
                 else{
@@ -51,8 +58,15 @@ int main(void)
             case (3):
             {
                 printf("How much do you want to withdraw ?\n");
-                scanf("%d", &wd);
-                if (wd > balance)
+                if (scanf("%d", &wd) != 1)
+           { printf("Invalid input, Enter a number \n");
+            while (getchar()!= '\n')
+            {
+
+            }
+            continue;
+           }
+                else if (wd > balance)
                     printf("The amount must'nt exceed your balance !\n");
 
                 else if (wd <= 0)
