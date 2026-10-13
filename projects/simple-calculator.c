@@ -1,4 +1,9 @@
 #include <stdio.h>
+// 1. Simple Calculator
+// Easy
+// What to build
+// Perform basic arithmetic operations (addition, subtraction, multiplication, division, modulus).
+// Skills: Functions, conditions, loops and numeric calculations.
 int main()
 {
     int add, sub, prod, div, mod, num1, num2;
