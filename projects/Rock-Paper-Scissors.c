@@ -23,10 +23,10 @@ int main()
         printf("It's a Draw !\n");
     }
     else if
-        (person == 1 && computer == 2 ||person ==2 && computer == 3 )
+        (person == 1 && computer == 2 ||person ==2 && computer == 3 || person == 3 && computer == 1)
         
             printf("Computer Won !\n");
-        else if (computer == 1 && person ==2 || computer == 2 && person == 3)
+        else if (computer == 1 && person ==2 || computer == 2 && person == 3 || computer == 3 && person ==1)
         {
             printf("Congratulations !!! You won !\n");
         }
