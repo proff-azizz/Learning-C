@@ -15,7 +15,7 @@ int main()
     printf("2. Paper\n");
     printf("3. Scissors\n");
     scanf("%d", &person);
-    if (person < 1 && person > 3)
+    if (person < 1 || person > 3)
     {
         printf("Invalid Input !!\n Choose a number between 1 to 3 \n");
         return 1;
