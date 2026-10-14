@@ -3,8 +3,8 @@
 #include <time.h>
 
 #define rock 1
-#define paper 2 
-#define scissors 3 
+#define paper 2
+#define scissors 3
 int main()
 {
     srand(time(NULL));
@@ -16,27 +16,24 @@ int main()
     printf("3. Scissors\n");
     scanf("%d", &person);
 
-     printf("You chose : %d\n", person);
-    printf("Computer Chose : %d\n", computer);
     if (person == computer)
     {
         printf("It's a Draw !\n");
     }
-    else if
-        (person == 1 && computer == 2 ||person ==2 && computer == 3 || person == 3 && computer == 1)
-        
-            printf("Computer Won !\n");
-        else if (computer == 1 && person ==2 || computer == 2 && person == 3 || computer == 3 && person ==1)
-        {
-            printf("Congratulations !!! You won !\n");
-        }
-        else 
-        {
-            printf("you chose incorrect option ! TRY AGAIN !!!\n");
-            return 0;
-        }
+    else if (person == 1 && computer == 2 || person == 2 && computer == 3 || person == 3 && computer == 1)
 
-   
-    
+        printf("Computer Won !\n");
+    else if (computer == 1 && person == 2 || computer == 2 && person == 3 || computer == 3 && person == 1)
+    {
+        printf("Congratulations !!! You won !\n");
+    }
+    else
+    {
+        printf("you chose incorrect option ! TRY AGAIN !!!\n");
+        return 0;
+    }
+    printf("You chose : %d\n", person);
+    printf("Computer Chose : %d\n", computer);
+
     return 0;
 }
