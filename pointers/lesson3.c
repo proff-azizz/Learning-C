@@ -1,4 +1,5 @@
-#include <stdio.h>
+// pointers with arrays
+ #include <stdio.h>
 int main()
 {
     int numbers[]={10,20,30};
