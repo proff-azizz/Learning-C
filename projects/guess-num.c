@@ -8,7 +8,7 @@ int main()
     {
         srand(time(NULL));
         int num;
-        int guess = rand() <=100 ;
+        int guess = rand() % 100;
         printf("== Guess The Number ==\n");
         printf("What's Your Guess ?\n");
         scanf("%d", &num);
