@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(void)
+{
+    int *p=NULL;
+    if (p==NULL)
+    {
+        printf("Pointer is Empty");
+    }
+}
