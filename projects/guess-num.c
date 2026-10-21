@@ -1,30 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-int main()
+int main(void)
 {
-    while (1)
-
+    int guess, attempt = 0;
+    srand(time(NULL));
+    int generated = rand() % 100 + 1;
+    do
     {
-        srand(time(NULL));
-        int num;
-        int guess = rand() % 100;
-        printf("== Guess The Number ==\n");
-        printf("What's Your Guess ?\n");
-        scanf("%d", &num);
-        if (num > guess )
+
+        printf("Enter Your Guess Number : ");
+        if (scanf("%d", &guess) != 1)
         {
-            printf("Too High\n");
+            printf("Enter a valid input !\n");
+            while (getchar() != '\n')
+            {
+                
+            }
+
+                continue;
         }
-        else if (num < guess)
+
+        if (guess < generated)
         {
-            printf("Too Low Try AGAIN\n");
+            printf("Too Low Guess another\n");
         }
-        else
+        else if (guess > generated)
         {
-            printf("Congratulations !!!\nCorrect Guess !\n");
+            printf("Too High Guess a bit lower\n");
         }
-        
+        attempt++;
+
+    } while (guess != generated);
+    {
+        printf("Congratulations !!! You Guess the correct Number.\n");
+        printf("You guessed the correct number in %d attempts\n", attempt);
     }
     return 0;
 }
