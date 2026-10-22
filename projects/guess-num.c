@@ -8,6 +8,10 @@ int main(void)
     int generated = rand() % 100 + 1;
     int lower = (generated/10)*10;
     int upper = lower +10;
+    if(upper>100)
+    {
+        upper=100;
+    }
     do
     {
         printf("====== NUMBER GUESSING GAME ======\n");
@@ -25,6 +29,7 @@ int main(void)
         if(guess==000)
         {
         printf("The number is between %d and %d\n",lower,upper);
+        continue;
         }
         if (guess < generated)
         {
