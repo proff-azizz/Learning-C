@@ -19,27 +19,48 @@ int main(void)
 //         return 1;
 //     }
 // }
-{
-    int *numbers=malloc(2*sizeof(int)); //allocate meomory 
-if (numbers == NULL)
-{
-    return 1;
-}
-numbers[0]=10;
-numbers[1]=20;
-int *temp = realloc(numbers,3*sizeof(int));
-if(temp==NULL)
-{
-    free(numbers);
-    return 1;
-}
-numbers =temp;
-numbers[2]=30;
-printf("%d %d %d\n",numbers[0],numbers[1],numbers[3]);
-free(numbers);
-return 0;
-    
-}
+// {
+//     int *numbers = malloc(2 * sizeof(int)); // allocate meomory
+//     if (numbers == NULL)
+//     {
+//         return 1;
+//     }
+//     numbers[0] = 10;
+//     numbers[1] = 20;
+//     int *temp = realloc(numbers, 3 * sizeof(int));
+//     if (temp == NULL)
+//     {
+//         free(numbers);
+//         return 1;
+//     }
 
+//     numbers = temp;
+//     numbers[2] = 30;
+//     printf("%d %d %d\n", numbers[0], numbers[1], numbers[2]);
+//     free(numbers);
+//     return 0;
+// }
+{
+    int *numbers = malloc(4 * sizeof(int));
+    if (numbers == NULL)
+    {
+        return 1;
+    }
+    numbers[0] = 10;
+    numbers[1] = 20;
+    numbers[2] = 30;
+    numbers[3] = 50;
+    int *new = realloc(numbers, 3 * sizeof(int));
+    if (new == NULL)
+    {
+        free(numbers);
+        return 1;
+    }
+    numbers = new;
+    numbers[2] = 40;
 
+    printf("%d %d %d %d", numbers[0], numbers[1], numbers[2],numbers[3]);
+    free(new);
 
+    return 0;
+}
