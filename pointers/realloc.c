@@ -40,27 +40,39 @@ int main(void)
 //     free(numbers);
 //     return 0;
 // }
+// program 2
+// {
+//     int *numbers = malloc(4 * sizeof(int));
+//     if (numbers == NULL)
+//     {
+//         return 1;
+//     }
+//     numbers[0] = 10;
+//     numbers[1] = 20;
+//     numbers[2] = 30;
+//     numbers[3] = 50;
+//     int *new = realloc(numbers, 3 * sizeof(int));
+//     if (new == NULL)
+//     {
+//         free(numbers);
+//         return 1;
+//     }
+//     numbers = new;
+//     numbers[2] = 40;
+
+//     printf("%d %d %d %d", numbers[0], numbers[1], numbers[2],numbers[3]);
+//     free(new);
+
+//     return 0;
+// }
 {
-    int *numbers = malloc(4 * sizeof(int));
-    if (numbers == NULL)
-    {
-        return 1;
-    }
-    numbers[0] = 10;
-    numbers[1] = 20;
-    numbers[2] = 30;
-    numbers[3] = 50;
-    int *new = realloc(numbers, 3 * sizeof(int));
-    if (new == NULL)
-    {
-        free(numbers);
-        return 1;
-    }
-    numbers = new;
-    numbers[2] = 40;
-
-    printf("%d %d %d %d", numbers[0], numbers[1], numbers[2],numbers[3]);
-    free(new);
-
-    return 0;
+    int *numbers = calloc(3,sizeof(int));
+    if(numbers==NULL)
+    return 1;
+    numbers[0]=10;
+    free(numbers);
+    numbers = NULL;
+    if (numbers==NULL)
+    printf("No Memory");
+    free(numbers);
 }
