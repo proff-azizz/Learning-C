@@ -65,14 +65,25 @@ int main(void)
 
 //     return 0;
 // }
+// {
+//     int *numbers = calloc(3,sizeof(int));
+//     if(numbers==NULL)
+//     return 1;
+//     numbers[0]=10;
+//     free(numbers);
+//     numbers = NULL;
+//     if (numbers==NULL)
+//     printf("No Memory");
+//     free(numbers);
+// }
 {
-    int *numbers = calloc(3,sizeof(int));
-    if(numbers==NULL)
-    return 1;
-    numbers[0]=10;
-    free(numbers);
-    numbers = NULL;
-    if (numbers==NULL)
-    printf("No Memory");
-    free(numbers);
+    int *p=malloc(sizeof(int));
+    *p = 10;
+    int *q=malloc(sizeof(int));
+    *q=20;
+    free(p);
+    p=q;
+    
+    q=NULL;
+    p=NULL;
 }
