@@ -81,9 +81,9 @@ int main(void)
     *p = 10;
     int *q=malloc(sizeof(int));
     *q=20;
-    free(p);
-    p=q;
-    
-    q=NULL;
+    free(p); //Release the memory containing 10 
+        p=q; //Now p points to the memory containing 20
+    free(p); //release the memory containing 20
+    q=NULL; //avoid leaving q as a dangling pointer
     p=NULL;
 }
