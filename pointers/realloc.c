@@ -76,14 +76,19 @@ int main(void)
 //     printf("No Memory");
 //     free(numbers);
 // }
+// {
+//     int *p=malloc(sizeof(int));
+//     *p = 10;
+//     int *q=malloc(sizeof(int));
+//     *q=20;
+//     free(p); //Release the memory containing 10 
+//         p=q; //Now p points to the memory containing 20
+//     free(p); //release the memory containing 20
+//     q=NULL; //avoid leaving q as a dangling pointer
+//     p=NULL;
+// }
 {
-    int *p=malloc(sizeof(int));
-    *p = 10;
-    int *q=malloc(sizeof(int));
-    *q=20;
-    free(p); //Release the memory containing 10 
-        p=q; //Now p points to the memory containing 20
-    free(p); //release the memory containing 20
-    q=NULL; //avoid leaving q as a dangling pointer
-    p=NULL;
+    int count=5;
+    int *numbers=malloc(count *sizeof(int));
+    printf("%zu\n",sizeof(numbers));
 }
