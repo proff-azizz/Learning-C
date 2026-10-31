@@ -15,7 +15,7 @@ int main(void)
     while (1)
     {
         printf("WELCOME TO MY MINI ATM SIMULATOR !!!\n");
-        printf("So What do you Want To Do Today ?\n ");
+        printf("So What do you Want To Do Today ?\n");
         printf("1. Show Balance\n");
         printf("2. Deposit Money\n");
         printf("3. Withdraw Money\n");
