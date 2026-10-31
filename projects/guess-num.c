@@ -3,14 +3,14 @@
 #include <time.h>
 int main(void)
 {
-    int guess, attempt = 0,hint;
+    int guess, attempt = 0, hint;
     srand(time(NULL));
     int generated = rand() % 100 + 1;
-    int lower = (generated/10)*10;
-    int upper = lower +10;
-    if(upper>100)
+    int lower = (generated / 10) * 10;
+    int upper = lower + 10;
+    if (upper > 100)
     {
-        upper=100;
+        upper = 100;
     }
     do
     {
@@ -26,10 +26,10 @@ int main(void)
             continue;
         }
         printf("Enter 000 For hint\n");
-        if(guess==000)
+        if (guess == 000)
         {
-        printf("The number is between %d and %d\n",lower,upper);
-        continue;
+            printf("The number is between %d and %d\n", lower, upper);
+            continue;
         }
         if (guess < generated)
         {
@@ -39,7 +39,7 @@ int main(void)
         {
             printf("Too High Guess a bit lower\n");
         }
-        
+
         attempt++;
 
     } while (guess != generated);
