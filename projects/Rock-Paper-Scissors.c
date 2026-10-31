@@ -17,7 +17,7 @@ int main()
     scanf("%d", &person);
     if (person < 1 || person > 3)
     {
-        printf("Invalid Input !!\n Choose a number between 1 to 3 \n");
+        printf(" Invalid Input !!\n Choose a number between 1 to 3 \n");
         return 1;
     }
 
@@ -37,8 +37,30 @@ int main()
         printf("you chose incorrect option ! TRY AGAIN !!!\n");
         return 0;
     }
-    printf("You chose : %d\n", person);
-    printf("Computer Chose : %d\n", computer);
+    if(person == 1)
+    {
+        printf("You chose Rock\n");
+    }
+    else if(person == 2)
+    {
+        printf("You chose Paper\n");
+    }
+    else if(person == 3)
+    {
+        printf("You chose Scissors\n");
+    }
+    if(computer == 1)
+    {
+        printf("Computer Chose Rock\n");
+    }
+    else if(computer == 2)
+    {
+        printf("Computer Chose Paper\n");
+    }
+    else if (computer == 3)
+    {
+        printf("Computer Chose Scissors\n");
+    }
 
     return 0;
 }

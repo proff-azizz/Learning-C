@@ -12,3 +12,4 @@ int main()
     printf("%d",*p1);
     return 0;
 }
+
