@@ -16,7 +16,8 @@ void rev_triangular()
 int main()
 {
     int choice;
-    printf("Enter 1 to print triangular star pattern\nEnter 2 to print Reversed triangular pattern");
+    printf("==== STAR PRINTING ====\n");
+    printf("Enter 1 to print triangular star pattern\nEnter 2 to print Reversed triangular pattern\n");
     if (scanf("%d", &choice) == 1)
     {
         switch (choice)
@@ -31,6 +32,9 @@ int main()
             rev_triangular();
             break;
         }
+        default:
+            printf("Enter a valid input");
+            break;
         }
     }
     else
