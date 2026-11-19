@@ -1,21 +1,20 @@
 #include <stdio.h>
-int a=4,b=3;
-int add(int *addition)
+int add(int a,int b)
 {
-    *addition= a + b;
+    a= a + b;
 }
-int subtract(int *sub)
+int subtract(int a, int b)
 {
-    *sub = a - b;
+    b = a - b;
 }
 int main()
 {
-    int c;
+    int a=4,b=3;
     printf("The value of a is %d and b is %d\n",a,b);
-    add(&add);
-    printf("%d\n",add);
-    subtract(&subtract);
-    printf("%d\n",subtract);
+    add(&a,&b);
+    printf("%d\n",a);
+    subtract(&a ,&b);
+    printf("%d\n",b);
 
     return 0;
 }
