@@ -9,26 +9,31 @@
 #include <stdio.h>
 int main()
 {
-    int salary;
-    float tax=0;
-    printf("Enter the amount you earn yearly : \n");
-    scanf("%d", &salary);
-    if (salary < 250000)
-        printf("There is no tax\n");
-    if (salary > 250000 && salary <= 500000)
-    {
-        tax = (5.0 / 100) * salary;
-        printf("You will need to pay %f as a tax amt", tax);
-    }
-    if (salary > 500000 && salary <= 1000000)
-    {
-        tax = (tax+ (20.0 / 100) * salary);
-        printf("You will need to pay %f as a tax amt", tax);
-    }
-    if (salary > 1000000)
-    {
-        tax =(tax + (30.0 / 100) * salary);
-        printf("You will need to pay %f as a tax amt", tax);
-    }
+int salary ;
+float tax =0;
+printf("Enter you Salary : ");
+scanf("%d",&salary);
+if (salary<250000)
+{
+    tax = 0;
+}
+else if (salary>250000 && salary<=500000)
+{
+    tax = (salary - 250000) * 0.05;
+    printf("You have to pay rs %.2f as tax",tax);
+}
+  
+
+else if ( salary >500000 && salary<=1000000 )
+{
+     tax = 250000 * 0.05 + (salary - 500000) * 0.20; 
+      printf("You have to pay rs %.2f as tax",tax);
+}
+else if(salary >1000000)
+{
+    tax = 250000 * 0.05 + 500000 * 0.20 + (salary - 1000000) * 0.30;
+     printf("You have to pay rs %.2f as tax",tax);
+}
+
     return 0;
 }
